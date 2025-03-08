@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Premium Asphalt Solutions</title>
 <script src="https://cdn.tailwindcss.com">
 </script>
@@ -37,13 +37,19 @@ tailwind.config = {
 :where([class^="ri-"])::before { content: "\f3c2"; }
 .scroll-top { display: none; }
 .scroll-top.active { display: block; }
+@media (max-width: 640px) {
+  h1 { font-size: 2rem !important; line-height: 2.5rem !important; }
+  h2 { font-size: 1.875rem !important; line-height: 2.25rem !important; }
+  h3 { font-size: 1.5rem !important; line-height: 2rem !important; }
+  .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
 </style>
 </head>
 <body class="bg-white min-h-screen">
 <header class="fixed w-full bg-white shadow-md z-50">
 <nav class="container mx-auto px-4 sm:px-6 py-2 sm:py-4">
 <div class="flex items-center justify-between">
-<div class="text-lg sm:text-xl lg:text-2xl font-bold text-primary tracking-wider">ELITE<span class="text-gray-700">ASPHALT</span></div>
+<div class="text-base sm:text-lg lg:text-xl font-bold text-primary tracking-wider">ELITE<span class="text-gray-700">ASPHALT</span></div>
 <div class="flex items-center">
 <div class="hidden md:flex space-x-3 lg:space-x-6 mr-3 lg:mr-6">
 <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
@@ -77,44 +83,44 @@ Narx So'rash
 </div>
 </nav>
 <div class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 hidden" id="mobile-menu-overlay">
-  <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl">
-    <div class="flex justify-between items-center p-4 border-b">
-      <div class="text-lg font-bold text-primary">ELITE<span class="text-gray-700">ASPHALT</span></div>
-      <button class="p-2" id="close-mobile-menu">
-        <i class="ri-close-line text-2xl"></i>
-      </button>
-    </div>
-    <div class="px-4 py-6 space-y-4">
-      <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
-      <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
-      <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
-      <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
-      <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
-      <div class="pt-4 border-t">
-        <button class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
-          Narx So'rash
-        </button>
-      </div>
-      <div class="pt-4 border-t">
-        <div class="flex items-center justify-center space-x-4">
-          <a href="tel:+998947203407" class="flex items-center text-primary">
-            <i class="ri-phone-fill mr-2"></i>
-            <span>+998 94 720 34 07</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl">
+<div class="flex justify-between items-center p-4 border-b">
+<div class="text-lg font-bold text-primary">ELITE<span class="text-gray-700">ASPHALT</span></div>
+<button class="p-2" id="close-mobile-menu">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="px-4 py-6 space-y-4">
+<a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
+<a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
+<a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
+<a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
+<a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
+<div class="pt-4 border-t">
+<button class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
+Narx So'rash
+</button>
+</div>
+<div class="pt-4 border-t">
+<div class="flex items-center justify-center space-x-4">
+<a href="tel:+998947203407" class="flex items-center text-primary">
+<i class="ri-phone-fill mr-2"></i>
+<span>+998 94 720 34 07</span>
+</a>
+</div>
+</div>
+</div>
+</div>
 </div>
 </header>
 <main>
-<section id="home" class="pt-20 relative min-h-screen flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
+<section id="home" class="pt-20 relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 <div class="container mx-auto px-6 relative z-10">
 <div class="max-w-2xl text-white">
 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6" data-translate="hero_title">Butun O'zbekiston bo'ylab sifatli asfalt xizmati</h1>
 <p class="text-lg sm:text-xl mb-6 sm:mb-8" data-translate="hero_desc">25 yildan ortiq tajriba bilan tijorat va turar-joy asfaltlash bo'yicha mukammallikni taqdim etamiz.</p>
-<button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90 text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
+<button class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
 Bepul Narx So'rash
 </button>
 </div>
@@ -123,7 +129,7 @@ Bepul Narx So'rash
 <section id="services" class="py-20 bg-gray-50">
 <div class="container mx-auto px-6">
 <h2 class="text-4xl font-bold text-center mb-16" data-translate="services_title">Bizning Xizmatlarimiz</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 <div class="bg-white p-8 rounded-lg shadow-lg">
 <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
 <i class="ri-road-map-line text-primary text-2xl"></i>
@@ -154,10 +160,10 @@ Bepul Narx So'rash
 <section id="why-us" class="py-20">
 <div class="container mx-auto px-6">
 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-<div class="md:w-1/2">
+<div class="lg:w-1/2">
 <img src="https://public.readdy.ai/ai/img_res/04bba9aafaa99ad580289c756a722368.jpg" alt="Why Choose Us" class="rounded-lg shadow-xl">
 </div>
-<div class="md:w-1/2">
+<div class="lg:w-1/2">
 <h2 class="text-4xl font-bold mb-8" data-translate="whyus_title">Nega Bizni Tanlaysiz</h2>
 <div class="space-y-6">
 <div class="flex items-start gap-4">
@@ -195,9 +201,9 @@ Bepul Narx So'rash
 <section id="projects" class="py-20 bg-gray-50">
 <div class="container mx-auto px-6">
 <h2 class="text-4xl font-bold text-center mb-16" data-translate="projects_title">Bizning Loyihalarimiz</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-64 object-cover">
+<img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
 <div class="p-6">
 <h3 class="text-xl font-bold mb-2" data-translate="projectTitle1">Tijorat Avtoturargoh</h3>
 <p class="text-gray-600" data-translate="projectDesc1">Savdo markazi uchun 50,000 kv fut avtoturargoh</p>
@@ -222,8 +228,8 @@ Bepul Narx So'rash
 </section>
 <section id="contact" class="py-12 sm:py-16 lg:py-20">
 <div class="container mx-auto px-6">
-<div class="flex flex-col md:flex-row gap-12">
-<div class="md:w-1/2">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/2">
 <h2 class="text-4xl font-bold mb-8" data-translate="contact_title">Manzilimiz</h2>
 <div class="mb-8">
 <div class="flex items-center mb-4">
@@ -240,7 +246,7 @@ Bepul Narx So'rash
 </div>
 </div>
 </div>
-<div class="md:w-1/2">
+<div class="lg:w-1/2">
 <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
 <h3 class="text-2xl font-bold mb-6" data-translate="workingHours">Ish Vaqti</h3>
 <div class="space-y-3">
@@ -268,7 +274,7 @@ Bepul Narx So'rash
 </main>
 <footer class="bg-gray-900 text-white py-12">
 <div class="container mx-auto px-6">
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <div>
 <div class="text-2xl sm:text-3xl font-bold tracking-wider mb-4 text-white">ELITE<span class="text-gray-400">ASPHALT</span></div>
 <p class="text-gray-400">Tijorat va turar-joy loyihalari uchun premium asfalt yechimlari.</p>
@@ -446,18 +452,18 @@ element.textContent = translations[lang][key];
 const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 const closeMobileMenu = document.getElementById('close-mobile-menu');
 mobileMenuButton.addEventListener('click', () => {
-  mobileMenuOverlay.classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+mobileMenuOverlay.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
 });
 closeMobileMenu.addEventListener('click', () => {
-  mobileMenuOverlay.classList.add('hidden');
-  document.body.style.overflow = '';
+mobileMenuOverlay.classList.add('hidden');
+document.body.style.overflow = '';
 });
 mobileMenuOverlay.addEventListener('click', (e) => {
-  if (e.target === mobileMenuOverlay) {
-    mobileMenuOverlay.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
+if (e.target === mobileMenuOverlay) {
+mobileMenuOverlay.classList.add('hidden');
+document.body.style.overflow = '';
+}
 });
 window.addEventListener('scroll', () => {
 if (window.pageYOffset > 300) {
