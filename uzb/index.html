@@ -402,7 +402,6 @@
     const languageLinks = document.querySelectorAll("[data-lang]");
     const currentLang = document.querySelector(".current-lang");
     function handleLanguageChange(e) {
-      e.preventDefault();
       const lang = e.target.dataset.lang;
       currentLang.textContent = lang.toUpperCase();
       document.querySelectorAll("[data-translate]").forEach((element) => {
