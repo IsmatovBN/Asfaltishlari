@@ -324,173 +324,69 @@ Bepul Narx So'rash
 <button class="scroll-top fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-opacity-90">
 <i class="ri-arrow-up-line text-xl"></i>
 </button>
-
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const scrollTopButton = document.querySelector('.scroll-top');
-const languageLinks = document.querySelectorAll('[data-lang]');
-const currentLang = document.querySelector('.current-lang');
+<script>
 const translations = {
-uz: {
-home: 'Asosiy',
-services: 'Xizmatlar',
-whyUs: 'Nega Biz',
-projects: 'Loyihalar',
-contact: 'Aloqa',
-serviceTitle1: 'Asfalt Yotqizish',
-serviceDesc1: 'Kirish yo\'llari, avtoturargohlar va yo\'llar uchun professional asfalt yotqizish xizmatlari.',
-serviceTitle2: 'Texnik Xizmat va Ta\'mirlash',
-serviceDesc2: 'Asfalt yuzalarining xizmat muddatini uzaytirish uchun keng qamrovli texnik xizmat ko\'rsatish.',
-serviceTitle3: 'Germetiklash',
-serviceDesc3: 'Asfalt yuzalarini saqlash va yaxshilash uchun himoya qoplamasi xizmatlari.',
-projectTitle1: 'Tijorat Avtoturargoh',
-projectDesc1: 'Savdo markazi uchun 50,000 kv fut avtoturargoh',
-projectTitle2: 'Turar-joy Kirish Yo\'li',
-projectDesc2: 'Bezakli chegaralari bilan maxsus kirish yo\'li',
-projectTitle3: 'Sanoat Yo\'li',
-projectDesc3: '2 millik sanoat kirish yo\'lini qurish',
-getQuote: 'Narx So\'rash',
-hero_title: 'Butun O'zbekiston bo'ylab sifatli asfalt xizmati',
-hero_desc: '25 yildan ortiq tajriba bilan tijorat va turar-joy asfaltlash bo\'yicha mukammallikni taqdim etamiz.',
-hero_btn: 'Bepul Narx So\'rash',
-services_title: 'Bizning Xizmatlarimiz',
-whyus_title: 'Nega Bizni Tanlaysiz',
-projects_title: 'Bizning Loyihalarimiz',
-contact_title: 'Manzilimiz',
-workingHours: 'Ish Vaqti',
-quickLinks: 'Tezkor Havolalar',
-contactInfo: 'Aloqa Ma\'lumotlari',
-followUs: 'Bizni Kuzating',
-copyright: '© 2025 EliteAsphalt. Barcha huquqlar himoyalangan.',
-monday: 'Dushanba - Juma',
-saturday: 'Shanba',
-sunday: 'Yakshanba',
-closed: 'Yopiq'
-},
-ru: {
-home: 'Главная',
-services: 'Услуги',
-whyUs: 'Почему Мы',
-projects: 'Проекты',
-contact: 'Контакты',
-serviceTitle1: 'Укладка Асфальта',
-serviceDesc1: 'Профессиональные услуги по укладке асфальта для подъездных путей, парковок и дорог.',
-serviceTitle2: 'Обслуживание и Ремонт',
-serviceDesc2: 'Комплексное техническое обслуживание для продления срока службы асфальтовых покрытий.',
-serviceTitle3: 'Герметизация',
-serviceDesc3: 'Услуги по защитному покрытию для сохранения и улучшения асфальтовых поверхностей.',
-projectTitle1: 'Коммерческая Парковка',
-projectDesc1: '50,000 кв. футов парковки для торгового центра',
-projectTitle2: 'Жилая Подъездная Дорога',
-projectDesc2: 'Специальная подъездная дорога с декоративными границами',
-projectTitle3: 'Промышленная Дорога',
-projectDesc3: 'Строительство 2-мильной промышленной подъездной дороги',
-getQuote: 'Получить Цену',
-hero_title: 'Премиальные Асфальтовые Решения для Вашей Инфраструктуры',
-hero_desc: 'Мы предоставляем превосходство в коммерческом и жилом асфальтировании с более чем 25-летним опытом.',
-hero_btn: 'Получить Бесплатную Цену',
-services_title: 'Наши Услуги',
-whyus_title: 'Почему Выбирают Нас',
-projects_title: 'Наши Проекты',
-contact_title: 'Наше Местоположение',
-workingHours: 'Часы Работы',
-quickLinks: 'Быстрые Ссылки',
-contactInfo: 'Контактная Информация',
-followUs: 'Следите за Нами',
-copyright: '© 2025 EliteAsphalt. Все права защищены.',
-monday: 'Понедельник - Пятница',
-saturday: 'Суббота',
-sunday: 'Воскресенье',
-closed: 'Закрыто'
-},
-en: {
-home: 'Home',
-services: 'Services',
-whyUs: 'Why Us',
-projects: 'Projects',
-contact: 'Contact',
-serviceTitle1: 'Asphalt Paving',
-serviceDesc1: 'Professional asphalt paving services for driveways, parking lots, and roads.',
-serviceTitle2: 'Maintenance & Repair',
-serviceDesc2: 'Comprehensive maintenance to extend the life of asphalt surfaces.',
-serviceTitle3: 'Sealcoating',
-serviceDesc3: 'Protective coating services to preserve and enhance asphalt surfaces.',
-projectTitle1: 'Commercial Parking Lot',
-projectDesc1: '50,000 sq ft parking lot for shopping center',
-projectTitle2: 'Residential Driveway',
-projectDesc2: 'Custom driveway with decorative borders',
-projectTitle3: 'Industrial Road',
-projectDesc3: '2-mile industrial access road construction',
-getQuote: 'Get Quote',
-hero_title: 'Premium Asphalt Solutions for Your Infrastructure',
-hero_desc: 'We deliver excellence in commercial and residential asphalt paving with over 25 years of experience.',
-hero_btn: 'Get Free Quote',
-services_title: 'Our Services',
-whyus_title: 'Why Choose Us',
-projects_title: 'Our Projects',
-contact_title: 'Our Location',
-workingHours: 'Working Hours',
-quickLinks: 'Quick Links',
-contactInfo: 'Contact Information',
-followUs: 'Follow Us',
-copyright: '© 2025 EliteAsphalt. All rights reserved.',
-monday: 'Dushanba-Juma',
-saturday: 'Shanba',
-sunday: 'Yakshanba',
-closed: 'Closed'
-}
+  uz: {
+    /*...*/
+  },
+  ru: {
+    /*...*/
+  },
+  en: {
+    /*...*/
+  },
 };
-languageLinks.forEach(link => {
-link.addEventListener('click', (e) => {
-e.preventDefault();
-const lang = link.dataset.lang;
-currentLang.textContent = lang.toUpperCase();
-document.querySelectorAll('[data-translate]').forEach(element => {
-const key = element.dataset.translate;
-if (translations[lang][key]) {
-element.textContent = translations[lang][key];
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+const closeMobileMenu = document.getElementById("close-mobile-menu");
+const scrollTopButton = document.querySelector(".scroll-top");
+const languageLinks = document.querySelectorAll("[data-lang]");
+const currentLang = document.querySelector(".current-lang");
+function handleLanguageChange(e) {
+  e.preventDefault();
+  const lang = e.target.dataset.lang;
+  currentLang.textContent = lang.toUpperCase();
+  document.querySelectorAll("[data-translate]").forEach((element) => {
+    const key = element.dataset.translate;
+    if (translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
 }
-});
-});
-});
-const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-const closeMobileMenu = document.getElementById('close-mobile-menu');
-mobileMenuButton.addEventListener('click', () => {
-mobileMenuOverlay.classList.remove('hidden');
-document.body.style.overflow = 'hidden';
-});
-closeMobileMenu.addEventListener('click', () => {
-mobileMenuOverlay.classList.add('hidden');
-document.body.style.overflow = '';
-});
-mobileMenuOverlay.addEventListener('click', (e) => {
-if (e.target === mobileMenuOverlay) {
-mobileMenuOverlay.classList.add('hidden');
-document.body.style.overflow = '';
+function toggleMobileMenu() {
+  mobileMenuOverlay.classList.toggle("hidden");
+  document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden")
+    ? ""
+    : "hidden";
 }
-});
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-scrollTopButton.classList.add('active');
-} else {
-scrollTopButton.classList.remove('active');
+function handleScroll() {
+  scrollTopButton.classList.toggle("active", window.pageYOffset > 300);
 }
-});
-scrollTopButton.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-const target = document.querySelector(this.getAttribute('href'));
-if (target) {
-target.scrollIntoView({
-behavior: 'smooth'
-});
-mobileMenu.classList.add('hidden');
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
+function scrollToSection(e) {
+  e.preventDefault();
+  const target = document.querySelector(this.getAttribute("href"));
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+    mobileMenuOverlay.classList.add("hidden");
+    document.body.style.overflow = "";
+  }
+}
+languageLinks.forEach((link) =>
+  link.addEventListener("click", handleLanguageChange),
+);
+mobileMenuButton.addEventListener("click", toggleMobileMenu);
+closeMobileMenu.addEventListener("click", toggleMobileMenu);
+mobileMenuOverlay.addEventListener("click", (e) => {
+  if (e.target === mobileMenuOverlay) toggleMobileMenu();
 });
+window.addEventListener("scroll", handleScroll);
+scrollTopButton.addEventListener("click", scrollToTop);
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", scrollToSection);
 });
-
+</script>
 </body>
 </html>
