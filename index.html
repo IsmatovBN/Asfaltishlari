@@ -43,9 +43,9 @@ tailwind.config = {
 <header class="fixed w-full bg-white shadow-md z-50">
 <nav class="container mx-auto px-4 sm:px-6 py-2 sm:py-4">
 <div class="flex items-center justify-between">
-<div class="text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-wider">ELITE<span class="text-gray-700">ASPHALT</span></div>
+<div class="text-lg sm:text-xl lg:text-2xl font-bold text-primary tracking-wider">ELITE<span class="text-gray-700">ASPHALT</span></div>
 <div class="flex items-center">
-<div class="hidden md:flex space-x-4 lg:space-x-8 mr-4 lg:mr-8">
+<div class="hidden md:flex space-x-3 lg:space-x-6 mr-3 lg:mr-6">
 <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
 <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
 <a href="#why-us" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
@@ -76,17 +76,35 @@ Narx So'rash
 </button>
 </div>
 </nav>
-<div class="md:hidden hidden bg-white" id="mobile-menu">
-<div class="px-4 py-2 space-y-3">
-<a href="#home" class="block text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
-<a href="#services" class="block text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
-<a href="#why-us" class="block text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
-<a href="#projects" class="block text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
-<a href="#contact" class="block text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
-<button class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap" data-translate="getQuote">
-Narx So'rash
-</button>
-</div>
+<div class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 hidden" id="mobile-menu-overlay">
+  <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl">
+    <div class="flex justify-between items-center p-4 border-b">
+      <div class="text-lg font-bold text-primary">ELITE<span class="text-gray-700">ASPHALT</span></div>
+      <button class="p-2" id="close-mobile-menu">
+        <i class="ri-close-line text-2xl"></i>
+      </button>
+    </div>
+    <div class="px-4 py-6 space-y-4">
+      <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
+      <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
+      <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
+      <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
+      <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
+      <div class="pt-4 border-t">
+        <button class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
+          Narx So'rash
+        </button>
+      </div>
+      <div class="pt-4 border-t">
+        <div class="flex items-center justify-center space-x-4">
+          <a href="tel:+998947203407" class="flex items-center text-primary">
+            <i class="ri-phone-fill mr-2"></i>
+            <span>+998 94 720 34 07</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </header>
 <main>
@@ -425,8 +443,21 @@ element.textContent = translations[lang][key];
 });
 });
 });
+const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+const closeMobileMenu = document.getElementById('close-mobile-menu');
 mobileMenuButton.addEventListener('click', () => {
-mobileMenu.classList.toggle('hidden');
+  mobileMenuOverlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+});
+closeMobileMenu.addEventListener('click', () => {
+  mobileMenuOverlay.classList.add('hidden');
+  document.body.style.overflow = '';
+});
+mobileMenuOverlay.addEventListener('click', (e) => {
+  if (e.target === mobileMenuOverlay) {
+    mobileMenuOverlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
 });
 window.addEventListener('scroll', () => {
 if (window.pageYOffset > 300) {
