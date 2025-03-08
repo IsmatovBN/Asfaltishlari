@@ -55,18 +55,19 @@ height: 100dvh;
 <div class="flex items-center justify-between">
 <div class="text-base sm:text-lg lg:text-xl font-bold text-primary tracking-wider">ELITE<span class="text-gray-700">ASPHALT</span></div>
 <div class="flex items-center">
-<div class="hidden md:flex space-x-3 lg:space-x-6 mr-3 lg:mr-6">
+<div class="hidden md:flex space-x-3 lg:space-x-6">
 <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
 <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
 <a href="#why-us" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
 <a href="#projects" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
 <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
 </div>
+<div class="flex items-center ml-6 lg:ml-8">
 <div class="hidden lg:flex text-base xl:text-xl font-bold text-primary mr-4 lg:mr-8">
 <i class="ri-phone-fill mr-2"></i>
 <a href="tel:+998947203407" class="whitespace-nowrap">+998 94 720 34 07</a>
 </div>
-<div class="relative group mr-8">
+<div class="relative group mr-4 lg:mr-8">
 <button class="flex items-center text-gray-700 hover:text-primary">
 <i class="ri-global-line mr-2"></i>
 <span class="current-lang">UZ</span>
@@ -84,6 +85,7 @@ Narx So'rash
 <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
 <i class="ri-menu-line text-2xl"></i>
 </button>
+</div>
 </div>
 </nav>
 <div class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 hidden" id="mobile-menu-overlay">
@@ -121,12 +123,18 @@ Narx So'rash
 <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
 <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 <div class="container mx-auto px-6 relative z-10">
+<div class="container mx-auto px-6 relative z-10 flex justify-between items-center">
 <div class="max-w-2xl text-white">
 <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6" data-translate="hero_title">Butun O'zbekiston bo'ylab sifatli asfalt xizmati</h1>
 <p class="text-lg sm:text-xl mb-6 sm:mb-8" data-translate="hero_desc">25 yildan ortiq tajriba bilan tijorat va turar-joy asfaltlash bo'yicha mukammallikni taqdim etamiz.</p>
 <button class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
 Bepul Narx So'rash
 </button>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-fill text-4xl sm:text-5xl mr-3 text-white"></i>
+<a href="tel:+998947203407" class="text-4xl sm:text-5xl font-bold text-white hover:text-primary transition-colors">+998 94 720 34 07</a>
+</div>
 </div>
 </div>
 </section>
@@ -321,7 +329,7 @@ Bepul Narx So'rash
 </div>
 </div>
 </footer>
-<button class="scroll-top fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-opacity-90">
+<button class="scroll-top fixed bottom-8 right-8 bg-white text-primary w-12 h-12 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-opacity-90">
 <i class="ri-arrow-up-line text-xl"></i>
 </button>
 <script>
