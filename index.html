@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- The base tag ensures that all relative URLs point to /Asfaltishlari/ -->
+  <base href="/Asfaltishlari/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Premium Asphalt Solutions</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -73,14 +75,14 @@
             <div class="relative group mr-4 lg:mr-8">
               <button class="flex items-center text-gray-700 hover:text-primary">
                 <i class="ri-global-line mr-2"></i>
-                <!-- The current-lang span is updated on page load -->
                 <span class="current-lang">UZ</span>
                 <i class="ri-arrow-down-s-line ml-1"></i>
               </button>
               <div class="hidden group-hover:block absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
-                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100">O'zbekcha</a>
-                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100">Русский</a>
-                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100">English</a>
+                <!-- Using relative paths because the base URL is set -->
+                <a href="uzb/" class="block px-4 py-2 hover:bg-gray-100">O'zbekcha</a>
+                <a href="rus/" class="block px-4 py-2 hover:bg-gray-100">Русский</a>
+                <a href="eng/" class="block px-4 py-2 hover:bg-gray-100">English</a>
               </div>
             </div>
             <!-- "Narx So'rash" directs to phone call -->
@@ -130,7 +132,7 @@
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- Hero Section with Centered Text and Responsive White Phone Number -->
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="container mx-auto px-6 relative z-10">
@@ -388,8 +390,8 @@
     <i class="ri-arrow-up-line text-xl"></i>
   </button>
   
-  <!-- Script to update current language based on URL -->
   <script>
+    // Script to update the current language display based on the URL
     document.addEventListener("DOMContentLoaded", () => {
       const currentLang = document.querySelector(".current-lang");
       const url = window.location.pathname;
@@ -398,16 +400,16 @@
       } else if (url.includes("/rus/")) {
         currentLang.textContent = "РУС";
       } else if (url.includes("/uzb/")) {
-        currentLang.textContent = "UZB";
+        currentLang.textContent = "UZ";
       }
     });
     
-    // Existing script for mobile menu, scroll, etc.
+    // Existing scripts for mobile menu and scroll functionality
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     const closeMobileMenu = document.getElementById("close-mobile-menu");
     const scrollTopButton = document.querySelector(".scroll-top");
-    
+
     function toggleMobileMenu() {
       mobileMenuOverlay.classList.toggle("hidden");
       document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden") ? "" : "hidden";
@@ -440,9 +442,7 @@
     });
     window.addEventListener("scroll", handleScroll);
     scrollTopButton.addEventListener("click", scrollToTop);
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", scrollToSection);
-    });
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => anchor.addEventListener("click", scrollToSection));
   </script>
 </body>
 </html>
