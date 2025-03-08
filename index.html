@@ -80,9 +80,10 @@
                 <a href="#" class="block px-4 py-2 hover:bg-gray-100" data-lang="en">English</a>
               </div>
             </div>
-            <button class="hidden md:block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base" data-translate="getQuote">
+            <!-- Updated: Narx So'rash now directs to phone call -->
+            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base" data-translate="getQuote">
               Narx So'rash
-            </button>
+            </a>
             <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
               <i class="ri-menu-line text-2xl"></i>
             </button>
@@ -90,6 +91,7 @@
         </div>
       </div>
     </nav>
+    <!-- Mobile Menu Overlay -->
     <div class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 hidden" id="mobile-menu-overlay">
       <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl overflow-y-auto">
         <div class="flex justify-between items-center p-4 border-b">
@@ -105,9 +107,10 @@
           <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
           <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
           <div class="pt-4 border-t">
-            <button class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
+            <!-- Updated: Narx So'rash in mobile menu now directs to phone call -->
+            <a href="tel:+998947203407" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
               Narx So'rash
-            </button>
+            </a>
           </div>
           <div class="pt-4 border-t">
             <div class="flex items-center justify-center space-x-4">
@@ -122,7 +125,7 @@
     </div>
   </header>
   <main>
-    <!-- Updated Hero Section with Centered Text and Responsive White Phone Number -->
+    <!-- Hero Section with Centered Text and Responsive White Phone Number -->
     <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="container mx-auto px-6 relative z-10">
@@ -132,7 +135,7 @@
               Butun O'zbekiston bo'ylab sifatli asfalt xizmati
             </h1>
             <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center" data-translate="hero_desc">
-              25 yildan ortiq tajriba bilan tijorat va turar-joy asfaltlash bo'yicha mukammallikni taqdim etamiz.
+              25 yildan ortiq tajriba bilan barcha turdagi asfalt xizmatlarini ko'rsatishda mukammallikni taqdim etamiz.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -142,9 +145,10 @@
                 +998 94 720 34 07
               </a>
             </div>
-            <button class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
+            <!-- Updated: Bepul Narx So'rash now directs to phone call -->
+            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
               Bepul Narx So'rash
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -179,11 +183,51 @@
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-paint-line text-primary text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4" data-translate="serviceTitle3">Germetiklash</h3>
+            <!-- Updated Service Card 3 -->
+            <h3 class="text-2xl font-bold mb-4" data-translate="serviceTitle3">Bordyurlarni o'rnatish</h3>
             <p class="text-gray-600 mb-6" data-translate="serviceDesc3">
-              Asfalt yuzalarini saqlash va yaxshilash uchun himoya qoplamasi xizmatlari.
+              Asfalt yuzalarini saqlash va yaxshilash uchun bordyur o'rnatish xizmatlari.
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Batafsil →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Projects Section (Updated Section Header and Project Cards) -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16" data-translate="projects_title">Bizning xizmatlarimiz</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Project Card 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle1">Avtoturargoh yo'llari</h3>
+              <p class="text-gray-600" data-translate="projectDesc1">
+                Avtoturargoh yo'llarini asfaltlash va ta'mirlash xizmati.
+              </p>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Project 2" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle2">Mahalla va turar-joy maydonlari</h3>
+              <p class="text-gray-600" data-translate="projectDesc2">
+                Mahalla va turar-joy maydonlariga asfalt yotqizish va ta'mirlash xizmati.
+              </p>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Project 3" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle3">Korxona va zavod maydonlari</h3>
+              <p class="text-gray-600" data-translate="projectDesc3">
+                Korxona va zavod maydonlariga asfalt yotqizish va ta'mirlash xizmati.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -206,7 +250,7 @@
                 <div>
                   <h3 class="text-xl font-bold mb-2">25+ Yillik Tajriba</h3>
                   <p class="text-gray-600">
-                    Yuqori sifatli asfalt yechimlarini yetkazib berishda o'n yillik tajriba.
+                    Yuqori sifatli bacrha asfalt xizmatlarini ko'rsatishda yigirma besh yillik tajriba.
                   </p>
                 </div>
               </div>
@@ -217,7 +261,7 @@
                 <div>
                   <h3 class="text-xl font-bold mb-2">Sifat Kafolati</h3>
                   <p class="text-gray-600">
-                    Biz faqat premium materiallar va ilg'or texnologiyalardan foydalanamiz.
+                    Biz faqat sifatli materiallar va zamonaviy texnologiyalardan foydalanamiz.
                   </p>
                 </div>
               </div>
@@ -232,42 +276,6 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16" data-translate="projects_title">Bizning Loyihalarimiz</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle1">Tijorat Avtoturargoh</h3>
-              <p class="text-gray-600" data-translate="projectDesc1">
-                Savdo markazi uchun 50,000 kv fut avtoturargoh
-              </p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Project 2" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle2">Turar-joy Kirish Yo'li</h3>
-              <p class="text-gray-600" data-translate="projectDesc2">
-                Bezakli chegaralari bilan maxsus kirish yo'li
-              </p>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Project 3" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle3">Sanoat Yo'li</h3>
-              <p class="text-gray-600" data-translate="projectDesc3">
-                2 millik sanoat kirish yo'lini qurish
-              </p>
             </div>
           </div>
         </div>
@@ -329,16 +337,16 @@
             ELITE<span class="text-gray-400">ASPHALT</span>
           </div>
           <p class="text-gray-400">
-            Tijorat va turar-joy loyihalari uchun premium asfalt yechimlari.
+            25 yildan ortiq tajriba bilan barcha turdagi asfalt xizmatlarini ko'rsatishda yuqori sifat!
           </p>
         </div>
         <div>
           <h4 class="text-xl font-bold mb-4" data-translate="quickLinks">Tezkor Havolalar</h4>
           <ul class="space-y-2">
-            <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
-            <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
-            <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
-            <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+            <li><a href="#home" class="text-gray-400 hover:text-white">Asosiy</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-white">Xizmatlar</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white">Nega biz</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-white">Aloqa</a></li>
           </ul>
         </div>
         <div>
