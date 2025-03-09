@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
+  <!-- The base tag ensures that all relative URLs point to /Asfaltishlari/ -->
   <base href="/Asfaltishlari/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Premium Asphalt Solutions</title>
@@ -50,6 +51,7 @@
   </style>
 </head>
 <body class="bg-white min-h-screen">
+  <!-- HEADER -->
   <header class="fixed w-full bg-white shadow-md z-40 top-0" style="background-color: rgba(255, 255, 255, 0.95);">
     <nav class="container mx-auto px-4 sm:px-6 py-2 sm:py-4">
       <div class="flex items-center justify-between">
@@ -58,17 +60,18 @@
         </div>
         <div class="flex items-center">
           <div class="hidden md:flex space-x-3 lg:space-x-6">
-            <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
-            <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
-            <a href="#why-us" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
-            <a href="#projects" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
-            <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
+            <a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-200">Asosiy</a>
+            <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-200">Xizmatlar</a>
+            <a href="#why-us" class="text-gray-700 hover:text-primary transition-colors duration-200">Nega Biz</a>
+            <a href="#projects" class="text-gray-700 hover:text-primary transition-colors duration-200">Loyihalar</a>
+            <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-200">Aloqa</a>
           </div>
           <div class="flex items-center ml-6 lg:ml-8">
             <div class="hidden lg:flex text-base xl:text-xl font-bold text-primary mr-4 lg:mr-8">
               <i class="ri-phone-fill mr-2"></i>
               <a href="tel:+998947203407" class="whitespace-nowrap">+998 94 720 34 07</a>
             </div>
+            <!-- Language Switcher -->
             <div class="relative group mr-4 lg:mr-8">
               <button class="flex items-center text-gray-700 hover:text-primary">
                 <i class="ri-global-line mr-2"></i>
@@ -76,13 +79,14 @@
                 <i class="ri-arrow-down-s-line ml-1"></i>
               </button>
               <div class="hidden group-hover:block absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
-                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100" data-lang="uz">O'zbekcha</a>
-                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100" data-lang="ru">Русский</a>
-                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100" data-lang="en">English</a>
+                <!-- Using relative paths because the base URL is set -->
+                <a href="uzb/" class="block px-4 py-2 hover:bg-gray-100">O'zbekcha</a>
+                <a href="rus/" class="block px-4 py-2 hover:bg-gray-100">Русский</a>
+                <a href="eng/" class="block px-4 py-2 hover:bg-gray-100">English</a>
               </div>
             </div>
-            <!-- Updated: Narx So'rash now directs to phone call -->
-            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base" data-translate="getQuote">
+            <!-- "Narx So'rash" directs to phone call -->
+            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base">
               Narx So'rash
             </a>
             <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
@@ -102,14 +106,14 @@
           </button>
         </div>
         <div class="px-4 py-6 space-y-4">
-          <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Asosiy</a>
-          <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Xizmatlar</a>
-          <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Nega Biz</a>
-          <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Loyihalar</a>
-          <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Aloqa</a>
+          <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Asosiy</a>
+          <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Xizmatlar</a>
+          <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Nega Biz</a>
+          <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Loyihalar</a>
+          <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Aloqa</a>
           <div class="pt-4 border-t">
-            <!-- Updated: Narx So'rash in mobile menu now directs to phone call -->
-            <a href="tel:+998947203407" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-translate="getQuote">
+            <!-- "Narx So'rash" in mobile menu -->
+            <a href="tel:+998947203407" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg">
               Narx So'rash
             </a>
           </div>
@@ -125,17 +129,19 @@
       </div>
     </div>
   </header>
+
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- Hero Section with Centered Text and Responsive White Phone Number -->
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col items-center text-white">
           <div class="max-w-2xl">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-center" data-translate="hero_title">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-center">
               Butun O'zbekiston bo'ylab sifatli asfalt xizmati
             </h1>
-            <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center" data-translate="hero_desc">
+            <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center">
               25 yildan ortiq tajriba bilan barcha turdagi asfalt xizmatlarini ko'rsatishda mukammallikni taqdim etamiz.
             </p>
           </div>
@@ -146,8 +152,8 @@
                 +998 94 720 34 07
               </a>
             </div>
-            <!-- Updated: Bepul Narx So'rash now directs to phone call -->
-            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
+            <!-- "Bepul Narx So'rash" directs to phone call -->
+            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap">
               Bepul Narx So'rash
             </a>
           </div>
@@ -158,14 +164,14 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16" data-translate="services_title">Bizning Xizmatlarimiz</h2>
+        <h2 class="text-4xl font-bold text-center mb-16">Bizning Xizmatlarimiz</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-road-map-line text-primary text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4" data-translate="serviceTitle1">Asfalt Yotqizish</h3>
-            <p class="text-gray-600 mb-6" data-translate="serviceDesc1">
+            <h3 class="text-2xl font-bold mb-4">Asfalt Yotqizish</h3>
+            <p class="text-gray-600 mb-6">
               Kirish yo'llari, avtoturargohlar va yo'llar uchun professional asfalt yotqizish xizmatlari.
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Batafsil →</a>
@@ -174,8 +180,8 @@
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-tools-line text-primary text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4" data-translate="serviceTitle2">Texnik Xizmat va Ta'mirlash</h3>
-            <p class="text-gray-600 mb-6" data-translate="serviceDesc2">
+            <h3 class="text-2xl font-bold mb-4">Texnik Xizmat va Ta'mirlash</h3>
+            <p class="text-gray-600 mb-6">
               Asfalt yuzalarining xizmat muddatini uzaytirish uchun keng qamrovli texnik xizmat ko'rsatish.
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Batafsil →</a>
@@ -184,9 +190,8 @@
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-paint-line text-primary text-2xl"></i>
             </div>
-            <!-- Updated Service Card 3 -->
-            <h3 class="text-2xl font-bold mb-4" data-translate="serviceTitle3">Bordyurlarni o'rnatish</h3>
-            <p class="text-gray-600 mb-6" data-translate="serviceDesc3">
+            <h3 class="text-2xl font-bold mb-4">Bordyurlarni o'rnatish</h3>
+            <p class="text-gray-600 mb-6">
               Asfalt yuzalarini saqlash va yaxshilash uchun bordyur o'rnatish xizmatlari.
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Batafsil →</a>
@@ -195,37 +200,34 @@
       </div>
     </section>
     
-    <!-- Projects Section (Updated Section Header and Project Cards) -->
+    <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16" data-translate="projects_title">Bizning xizmatlarimiz</h2>
+        <h2 class="text-4xl font-bold text-center mb-16">Bizning Xizmatlarimiz</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Project Card 1 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle1">Avtoturargoh yo'llari</h3>
-              <p class="text-gray-600" data-translate="projectDesc1">
+              <h3 class="text-xl font-bold mb-2">Avtoturargoh yo'llari</h3>
+              <p class="text-gray-600">
                 Avtoturargoh yo'llarini asfaltlash va ta'mirlash xizmati.
               </p>
             </div>
           </div>
-          <!-- Project Card 2 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Project 2" class="w-full h-64 object-cover">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle2">Mahalla va turar-joy maydonlari</h3>
-              <p class="text-gray-600" data-translate="projectDesc2">
+              <h3 class="text-xl font-bold mb-2">Mahalla va turar-joy maydonlari</h3>
+              <p class="text-gray-600">
                 Mahalla va turar-joy maydonlariga asfalt yotqizish va ta'mirlash xizmati.
               </p>
             </div>
           </div>
-          <!-- Project Card 3 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
             <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Project 3" class="w-full h-64 object-cover">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2" data-translate="projectTitle3">Korxona va zavod maydonlari</h3>
-              <p class="text-gray-600" data-translate="projectDesc3">
+              <h3 class="text-xl font-bold mb-2">Korxona va zavod maydonlari</h3>
+              <p class="text-gray-600">
                 Korxona va zavod maydonlariga asfalt yotqizish va ta'mirlash xizmati.
               </p>
             </div>
@@ -242,7 +244,7 @@
             <img src="https://public.readdy.ai/ai/img_res/04bba9aafaa99ad580289c756a722368.jpg" alt="Why Choose Us" class="rounded-lg shadow-xl">
           </div>
           <div class="lg:w-1/2">
-            <h2 class="text-4xl font-bold mb-8" data-translate="whyus_title">Nega Bizni Tanlaysiz</h2>
+            <h2 class="text-4xl font-bold mb-8">Nega Bizni Tanlaysiz</h2>
             <div class="space-y-6">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
@@ -288,11 +290,11 @@
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row gap-12">
           <div class="lg:w-1/2">
-            <h2 class="text-4xl font-bold mb-8" data-translate="contact_title">Manzilimiz</h2>
+            <h2 class="text-4xl font-bold mb-8">Bizning Manzilimiz</h2>
             <div class="mb-8">
               <div class="flex items-center mb-4">
                 <i class="ri-map-pin-2-fill text-primary text-2xl mr-3"></i>
-                <span class="text-xl">Toshkent shahar, Chilonzor tumani</span>
+                <span class="text-xl">Toshkent, Chilonzor tumani</span>
               </div>
               <div class="flex items-center mb-4">
                 <i class="ri-phone-fill text-primary text-2xl mr-3"></i>
@@ -306,19 +308,19 @@
           </div>
           <div class="lg:w-1/2">
             <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-              <h3 class="text-2xl font-bold mb-6" data-translate="workingHours">Ish Vaqti</h3>
+              <h3 class="text-2xl font-bold mb-6">Ish Vaqti</h3>
               <div class="space-y-3">
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="monday">Dushanba-Juma</span>
+                  <span class="text-gray-600">Dushanba - Juma</span>
                   <span class="font-semibold">7:00 - 18:00</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="saturday">Shanba</span>
+                  <span class="text-gray-600">Shanba</span>
                   <span class="font-semibold">8:00 - 19:00</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="sunday">Yakshanba</span>
-                  <span class="font-semibold" data-translate="closed">Closed</span>
+                  <span class="text-gray-600">Yakshanba</span>
+                  <span class="font-semibold">Yopiq</span>
                 </div>
               </div>
             </div>
@@ -330,6 +332,8 @@
       </div>
     </section>
   </main>
+
+  <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -338,29 +342,29 @@
             ELITE<span class="text-gray-400">ASPHALT</span>
           </div>
           <p class="text-gray-400">
-            25 yildan ortiq tajriba bilan barcha turdagi asfalt xizmatlarini ko'rsatishda yuqori sifat!
+            25 yildan ortiq tajribaga ega bo‘lgan holda, barcha turdagi asfalt xizmatlarini eng yuqori sifatda taqdim etamiz!
           </p>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="quickLinks">Tezkor Havolalar</h4>
+          <h4 class="text-xl font-bold mb-4">Tezkor Havolalar</h4>
           <ul class="space-y-2">
             <li><a href="#home" class="text-gray-400 hover:text-white">Asosiy</a></li>
             <li><a href="#services" class="text-gray-400 hover:text-white">Xizmatlar</a></li>
-            <li><a href="#projects" class="text-gray-400 hover:text-white">Nega biz</a></li>
+            <li><a href="#projects" class="text-gray-400 hover:text-white">Nega Biz</a></li>
             <li><a href="#contact" class="text-gray-400 hover:text-white">Aloqa</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="contactInfo">Aloqa Ma'lumotlari</h4>
+          <h4 class="text-xl font-bold mb-4">Aloqa Ma'lumotlari</h4>
           <ul class="space-y-2 text-gray-400">
-            <li>Toshkent shahar</li>
+            <li>Toshkent</li>
             <li>Chilonzor tumani</li>
             <li>Phone: (94) 720 35 07</li>
             <li>Email: info@example.com</li>
           </ul>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="followUs">Bizni Kuzating</h4>
+          <h4 class="text-xl font-bold mb-4">Bizni Kuzating</h4>
           <div class="flex space-x-4">
             <a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20">
               <i class="ri-facebook-fill"></i>
@@ -375,55 +379,50 @@
         </div>
       </div>
       <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-        <p data-translate="copyright">
+        <p>
           &copy; 2025 EliteAsphalt. Barcha huquqlar himoyalangan.
         </p>
       </div>
     </div>
   </footer>
+
   <button class="scroll-top fixed bottom-8 right-8 bg-white text-primary w-12 h-12 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-opacity-90">
     <i class="ri-arrow-up-line text-xl"></i>
   </button>
+  
   <script>
-    const translations = {
-      uz: {
-        /*...*/
-      },
-      ru: {
-        /*...*/
-      },
-      en: {
-        /*...*/
-      },
-    };
+    // Script to update the current language display based on the URL
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentLang = document.querySelector(".current-lang");
+      const url = window.location.pathname;
+      if (url.includes("/eng/")) {
+        currentLang.textContent = "ENG";
+      } else if (url.includes("/rus/")) {
+        currentLang.textContent = "РУС";
+      } else if (url.includes("/uzb/")) {
+        currentLang.textContent = "UZ";
+      }
+    });
+    
+    // Existing scripts for mobile menu and scroll functionality
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     const closeMobileMenu = document.getElementById("close-mobile-menu");
     const scrollTopButton = document.querySelector(".scroll-top");
-    const languageLinks = document.querySelectorAll("[data-lang]");
-    const currentLang = document.querySelector(".current-lang");
-    function handleLanguageChange(e) {
-      const lang = e.target.dataset.lang;
-      currentLang.textContent = lang.toUpperCase();
-      document.querySelectorAll("[data-translate]").forEach((element) => {
-        const key = element.dataset.translate;
-        if (translations[lang][key]) {
-          element.textContent = translations[lang][key];
-        }
-      });
-    }
+
     function toggleMobileMenu() {
       mobileMenuOverlay.classList.toggle("hidden");
-      document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden")
-        ? ""
-        : "hidden";
+      document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden") ? "" : "hidden";
     }
+    
     function handleScroll() {
       scrollTopButton.classList.toggle("active", window.pageYOffset > 300);
     }
+    
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
+    
     function scrollToSection(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
@@ -433,19 +432,17 @@
         document.body.style.overflow = "";
       }
     }
-    languageLinks.forEach((link) =>
-      link.addEventListener("click", handleLanguageChange)
-    );
+    
     mobileMenuButton.addEventListener("click", toggleMobileMenu);
-    closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    if(closeMobileMenu){
+      closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    }
     mobileMenuOverlay.addEventListener("click", (e) => {
       if (e.target === mobileMenuOverlay) toggleMobileMenu();
     });
     window.addEventListener("scroll", handleScroll);
     scrollTopButton.addEventListener("click", scrollToTop);
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", scrollToSection);
-    });
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => anchor.addEventListener("click", scrollToSection));
   </script>
 </body>
 </html>
