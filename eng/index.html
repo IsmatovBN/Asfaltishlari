@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- The base tag ensures that all relative URLs point to /Asfaltishlari/ -->
   <base href="/Asfaltishlari/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Premium Asphalt Solutions</title>
@@ -70,22 +71,22 @@
               <i class="ri-phone-fill mr-2"></i>
               <a href="tel:+998947203407" class="whitespace-nowrap">+998 94 720 34 07</a>
             </div>
-            <!-- Language Switcher -->
-            <div class="relative group mr-4 lg:mr-8">
-              <button class="flex items-center text-gray-700 hover:text-primary">
+            <!-- Language Switcher (click toggles dropdown) -->
+            <div class="relative mr-4 lg:mr-8">
+              <button id="lang-toggle" class="flex items-center text-gray-700 hover:text-primary focus:outline-none">
                 <i class="ri-global-line mr-2"></i>
-                <span class="current-lang">ENG</span>
+                <span class="current-lang">UZ</span>
                 <i class="ri-arrow-down-s-line ml-1"></i>
               </button>
-              <div class="hidden group-hover:block absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
-                <!-- With the base tag, these relative URLs resolve to /Asfaltishlari/uzb/, etc. -->
-                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100" data-lang="uzb">Uzbek</a>
-                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100" data-lang="rus">Russian</a>
-                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100" data-lang="eng">English</a>
+              <div id="lang-dropdown" class="hidden absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
+                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100 text-center">O'zbekcha</a>
+                <a href="/Asfaltishlari/kr/" class="block px-4 py-2 hover:bg-gray-100 text-center">Ўзбекча</a>
+                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100 text-center">Русский</a>
+                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100 text-center">English</a>
               </div>
             </div>
-            <!-- "Price Inquiry" directs to phone call -->
-            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base">
+            <!-- "Price Inquiry" button -->
+            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base mx-auto">
               Price Inquiry
             </a>
             <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
@@ -104,15 +105,41 @@
             <i class="ri-close-line text-2xl"></i>
           </button>
         </div>
-        <div class="px-4 py-6 space-y-4">
-          <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="home">Home</a>
-          <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="services">Services</a>
-          <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="whyUs">Why Us</a>
-          <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="projects">Projects</a>
-          <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200" data-translate="contact">Contact</a>
+        <!-- Mobile menu links with full-card clickable areas -->
+        <div class="space-y-4 px-4 py-6">
+          <a href="#home" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Home</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#services" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Services</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#why-us" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Why Us</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#projects" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Projects</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#contact" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Contact</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <!-- Centered "Price Inquiry" button -->
           <div class="pt-4 border-t">
-            <!-- "Price Inquiry" in mobile menu -->
-            <a href="tel:+998947203407" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg" data-lang="getQuote">
+            <a href="tel:+998947203407" class="block bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer text-lg mx-auto text-center w-full" style="max-width: 200px;">
               Price Inquiry
             </a>
           </div>
@@ -128,6 +155,8 @@
       </div>
     </div>
   </header>
+
+  <!-- MAIN CONTENT -->
   <main>
     <!-- Hero Section -->
     <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
@@ -135,11 +164,11 @@
       <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col items-center text-white">
           <div class="max-w-2xl">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-center" data-translate="hero_title">
-              Quality Asphalt Across Uzbekistan
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-center">
+              Quality Asphalt Service Throughout Uzbekistan
             </h1>
-            <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center" data-translate="hero_desc">
-              We deliver excellence in providing all types of asphalt services, backed by over 25 years of experience.
+            <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center">
+              We provide excellence in offering all types of asphalt services with over 25 years of experience.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -149,9 +178,9 @@
                 +998 94 720 34 07
               </a>
             </div>
-            <!-- "Free Price Inquiry" directs to phone call -->
-            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap" data-translate="hero_btn">
-              Free Price Inquiry
+            <!-- "Price Inquiry" button -->
+            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 rounded hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap">
+              Price Inquiry
             </a>
           </div>
         </div>
@@ -161,9 +190,8 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16" data-translate="services_title">Our Services</h2>
+        <h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Service Card 1 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-road-map-line text-primary text-2xl"></i>
@@ -172,20 +200,18 @@
             <p class="text-gray-600 mb-6">
               Professional asphalt laying services for driveways, parking lots, and roads.
             </p>
-            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn More →</a>
           </div>
-          <!-- Service Card 2 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-tools-line text-primary text-2xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Technical Service and Repair</h3>
+            <h3 class="text-2xl font-bold mb-4">Technical Service & Repair</h3>
             <p class="text-gray-600 mb-6">
-              Comprehensive technical services to extend the life of asphalt surfaces.
+              Comprehensive technical services to extend the lifespan of asphalt surfaces.
             </p>
-            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn More →</a>
           </div>
-          <!-- Service Card 3 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-paint-line text-primary text-2xl"></i>
@@ -194,7 +220,7 @@
             <p class="text-gray-600 mb-6">
               Installation services for curbs to protect and enhance asphalt surfaces.
             </p>
-            <a href="#" class="text-primary font-semibold hover:underline">Learn more →</a>
+            <a href="#" class="text-primary font-semibold hover:underline">Learn More →</a>
           </div>
         </div>
       </div>
@@ -203,31 +229,28 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center mb-16" data-translate="projects_title">Our Projects</h2>
+        <h2 class="text-4xl font-bold text-center mb-16">Our Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Project Card 1 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Parking Lots" class="w-full h-48 sm:h-64 object-cover">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Car Parks</h3>
+              <h3 class="text-xl font-bold mb-2">Parking Lots</h3>
               <p class="text-gray-600">
-                Asphalt paving and repair services for car park roads.
+                Asphalt paving and repair services for parking lots.
               </p>
             </div>
           </div>
-          <!-- Project Card 2 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Project 2" class="w-full h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Residential Areas" class="w-full h-64 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Residential Areas</h3>
               <p class="text-gray-600">
-                Asphalt paving and repair services for residential driveways.
+                Asphalt laying and repair services for residential areas.
               </p>
             </div>
           </div>
-          <!-- Project Card 3 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Project 3" class="w-full h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Industrial Facilities" class="w-full h-64 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Industrial Facilities</h3>
               <p class="text-gray-600">
@@ -247,16 +270,16 @@
             <img src="https://public.readdy.ai/ai/img_res/04bba9aafaa99ad580289c756a722368.jpg" alt="Why Choose Us" class="rounded-lg shadow-xl">
           </div>
           <div class="lg:w-1/2">
-            <h2 class="text-4xl font-bold mb-8" data-translate="whyus_title">Why Choose Us</h2>
+            <h2 class="text-4xl font-bold mb-8">Why Choose Us</h2>
             <div class="space-y-6">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full flex-shrink-0">
                   <i class="ri-medal-line text-primary text-xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Over 25 Years of Experience</h3>
+                  <h3 class="text-xl font-bold mb-2">Over 25 Years Experience</h3>
                   <p class="text-gray-600">
-                    We provide high-quality asphalt services backed by over 25 years of experience.
+                    We provide high-quality asphalt services with over 25 years of experience.
                   </p>
                 </div>
               </div>
@@ -276,9 +299,9 @@
                   <i class="ri-time-line text-primary text-xl"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Timely Completion</h3>
+                  <h3 class="text-xl font-bold mb-2">On-Time Completion</h3>
                   <p class="text-gray-600">
-                    We respect your time and complete projects as promised.
+                    We respect your time and deliver projects as promised.
                   </p>
                 </div>
               </div>
@@ -293,7 +316,7 @@
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row gap-12">
           <div class="lg:w-1/2">
-            <h2 class="text-4xl font-bold mb-8" data-translate="contact_title">Our Address</h2>
+            <h2 class="text-4xl font-bold mb-8">Our Address</h2>
             <div class="mb-8">
               <div class="flex items-center mb-4">
                 <i class="ri-map-pin-2-fill text-primary text-2xl mr-3"></i>
@@ -311,19 +334,19 @@
           </div>
           <div class="lg:w-1/2">
             <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-              <h3 class="text-2xl font-bold mb-6" data-translate="workingHours">Working Hours</h3>
+              <h3 class="text-2xl font-bold mb-6">Working Hours</h3>
               <div class="space-y-3">
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="monday">Monday - Friday</span>
-                  <span class="font-semibold">7:00 - 18:00</span>
+                  <span class="text-gray-600">Monday - Friday</span>
+                  <span class="font-semibold">Open 24/7</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="saturday">Saturday</span>
-                  <span class="font-semibold">8:00 - 19:00</span>
+                  <span class="text-gray-600">Saturday</span>
+                  <span class="font-semibold">Open 24/7</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600" data-translate="sunday">Sunday</span>
-                  <span class="font-semibold">Closed</span>
+                  <span class="text-gray-600">Sunday</span>
+                  <span class="font-semibold">Open 24/7</span>
                 </div>
               </div>
             </div>
@@ -335,7 +358,7 @@
       </div>
     </section>
   </main>
-  
+
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-6">
@@ -345,11 +368,11 @@
             ELITE<span class="text-gray-400">ASPHALT</span>
           </div>
           <p class="text-gray-400">
-            With over 25 years of experience in providing all kinds of asphalt services with the highest quality!
+            We provide high-quality asphalt services with over 25 years of experience!
           </p>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="quickLinks">Quick Links</h4>
+          <h4 class="text-xl font-bold mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
             <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
@@ -358,16 +381,16 @@
           </ul>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="contactInfo">Contact Information</h4>
+          <h4 class="text-xl font-bold mb-4">Contact Information</h4>
           <ul class="space-y-2 text-gray-400">
-            <li>Tashkent City</li>
+            <li>Tashkent</li>
             <li>Chilonzor District</li>
-            <li>Phone: +998 94 720 35 07</li>
+            <li>Phone: (94) 720 34 07</li>
             <li>Email: info@example.com</li>
           </ul>
         </div>
         <div>
-          <h4 class="text-xl font-bold mb-4" data-translate="followUs">Follow Us</h4>
+          <h4 class="text-xl font-bold mb-4">Follow Us</h4>
           <div class="flex space-x-4">
             <a href="#" class="w-10 h-10 flex items-center justify-center bg-white bg-opacity-10 rounded-full hover:bg-opacity-20">
               <i class="ri-facebook-fill"></i>
@@ -382,42 +405,47 @@
         </div>
       </div>
       <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-        <p data-translate="copyright">
+        <p>
           &copy; 2025 EliteAsphalt. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
-  
+
   <button class="scroll-top fixed bottom-8 right-8 bg-white text-primary w-12 h-12 rounded-full shadow-lg flex items-center justify-center cursor-pointer hover:bg-opacity-90">
     <i class="ri-arrow-up-line text-xl"></i>
   </button>
+  
   <script>
-    const translations = {
-      uz: { /* ... */ },
-      ru: { /* ... */ },
-      eng: { /* ... */ },
-    };
+    // Desktop Language dropdown toggle
+    document.getElementById('lang-toggle').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('lang-dropdown').classList.toggle('hidden');
+    });
+    // Close language dropdown when clicking outside (desktop)
+    document.addEventListener('click', function() {
+      document.getElementById('lang-dropdown').classList.add('hidden');
+    });
+
+    // Update current language display based on URL
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentLang = document.querySelector(".current-lang");
+      const url = window.location.pathname;
+      if (url.includes("/eng/")) {
+        currentLang.textContent = "ENG";
+      } else if (url.includes("/rus/")) {
+        currentLang.textContent = "RUS";
+      } else if (url.includes("/uzb/")) {
+        currentLang.textContent = "UZ";
+      }
+    });
+    
+    // Existing scripts for mobile menu and scroll functionality
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     const closeMobileMenu = document.getElementById("close-mobile-menu");
     const scrollTopButton = document.querySelector(".scroll-top");
-    const languageLinks = document.querySelectorAll("[data-lang]");
-    const currentLang = document.querySelector(".current-lang");
-    
-    function handleLanguageChange(e) {
-      // Use currentTarget to ensure you get the <a> element
-      const lang = e.currentTarget.dataset.lang;
-      // If the selected language is already active, prevent any navigation
-      if (currentLang.textContent.toLowerCase() === lang) {
-        e.preventDefault();
-        return;
-      }
-      // Otherwise, allow the browser to follow the link to the other language's folder/page.
-      // Optionally, if you wish to update the current language text before navigating, you can do so.
-      // currentLang.textContent = lang.toUpperCase();
-    }
-    
+
     function toggleMobileMenu() {
       mobileMenuOverlay.classList.toggle("hidden");
       document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden") ? "" : "hidden";
@@ -441,17 +469,16 @@
       }
     }
     
-    languageLinks.forEach((link) => link.addEventListener("click", handleLanguageChange));
     mobileMenuButton.addEventListener("click", toggleMobileMenu);
-    closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    if(closeMobileMenu){
+      closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    }
     mobileMenuOverlay.addEventListener("click", (e) => {
       if (e.target === mobileMenuOverlay) toggleMobileMenu();
     });
     window.addEventListener("scroll", handleScroll);
     scrollTopButton.addEventListener("click", scrollToTop);
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", scrollToSection);
-    });
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => anchor.addEventListener("click", scrollToSection));
   </script>
 </body>
 </html>
