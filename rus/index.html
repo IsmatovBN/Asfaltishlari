@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <!-- Базовый тег гарантирует, что все относительные URL указывают на /Asfaltishlari/ -->
   <base href="/Asfaltishlari/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Premium Asphalt Solutions</title>
@@ -50,7 +51,7 @@
   </style>
 </head>
 <body class="bg-white min-h-screen">
-  <!-- HEADER -->
+  <!-- ШАПКА -->
   <header class="fixed w-full bg-white shadow-md z-40 top-0" style="background-color: rgba(255, 255, 255, 0.95);">
     <nav class="container mx-auto px-4 sm:px-6 py-2 sm:py-4">
       <div class="flex items-center justify-between">
@@ -70,21 +71,22 @@
               <i class="ri-phone-fill mr-2"></i>
               <a href="tel:+998947203407" class="whitespace-nowrap">+998 94 720 34 07</a>
             </div>
-            <!-- Language Switcher -->
-            <div class="relative group mr-4 lg:mr-8">
-              <button class="flex items-center text-gray-700 hover:text-primary">
+            <!-- Переключатель языка (нажатие открывает/закрывает выпадающее меню) -->
+            <div class="relative mr-4 lg:mr-8">
+              <button id="lang-toggle" class="flex items-center text-gray-700 hover:text-primary focus:outline-none">
                 <i class="ri-global-line mr-2"></i>
-                <span class="current-lang">РУС</span>
+                <span class="current-lang">UZ</span>
                 <i class="ri-arrow-down-s-line ml-1"></i>
               </button>
-              <div class="hidden group-hover:block absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
-                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100" data-lang="uzb">O'zbekcha</a>
-                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100" data-lang="rus">Русский</a>
-                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100" data-lang="eng">English</a>
+              <div id="lang-dropdown" class="hidden absolute top-full right-0 bg-white shadow-lg rounded-lg py-2 w-32">
+                <a href="/Asfaltishlari/uzb/" class="block px-4 py-2 hover:bg-gray-100 text-center">Узбекский</a>
+                <a href="/Asfaltishlari/kr/" class="block px-4 py-2 hover:bg-gray-100 text-center">Узбекский (Кириллица)</a>
+                <a href="/Asfaltishlari/rus/" class="block px-4 py-2 hover:bg-gray-100 text-center">Русский</a>
+                <a href="/Asfaltishlari/eng/" class="block px-4 py-2 hover:bg-gray-100 text-center">Английский</a>
               </div>
             </div>
-            <!-- "Narx So'rash" (Price Inquiry) directs to phone call -->
-            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base">
+            <!-- Кнопка "Запрос цены" -->
+            <a href="tel:+998947203407" class="hidden md:inline-block bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-sm lg:text-base mx-auto">
               Запрос цены
             </a>
             <button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobile-menu-button">
@@ -94,7 +96,7 @@
         </div>
       </div>
     </nav>
-    <!-- Mobile Menu Overlay -->
+    <!-- Мобильное меню -->
     <div class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300 hidden" id="mobile-menu-overlay">
       <div class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl overflow-y-auto">
         <div class="flex justify-between items-center p-4 border-b">
@@ -103,15 +105,41 @@
             <i class="ri-close-line text-2xl"></i>
           </button>
         </div>
-        <div class="px-4 py-6 space-y-4">
-          <a href="#home" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Главная</a>
-          <a href="#services" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Услуги</a>
-          <a href="#why-us" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Почему мы</a>
-          <a href="#projects" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Проекты</a>
-          <a href="#contact" class="block text-lg py-2 text-gray-700 hover:text-primary transition-colors duration-200">Контакты</a>
+        <!-- Ссылки мобильного меню с полноразмерными карточками -->
+        <div class="space-y-4 px-4 py-6">
+          <a href="#home" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Главная</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#services" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Услуги</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#why-us" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Почему мы</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#projects" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Проекты</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <a href="#contact" class="block">
+            <div class="flex items-center justify-between bg-gray-100 rounded px-4 py-3">
+              <span class="text-lg text-gray-700 transition-colors duration-200">Контакты</span>
+              <i class="ri-arrow-right-s-line text-gray-400 text-xl"></i>
+            </div>
+          </a>
+          <!-- Центрированная кнопка "Запрос цены" -->
           <div class="pt-4 border-t">
-            <!-- "Narx So'rash" in mobile menu -->
-            <a href="tel:+998947203407" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer whitespace-nowrap text-lg">
+            <a href="tel:+998947203407" class="block bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 cursor-pointer text-lg mx-auto text-center w-full" style="max-width: 200px;">
               Запрос цены
             </a>
           </div>
@@ -128,19 +156,19 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
   <main>
-    <!-- Hero Section -->
+    <!-- Геро-раздел -->
     <section id="home" class="relative min-h-[100svh] flex items-center" style="background-image: url('https://public.readdy.ai/ai/img_res/08e62f1e05e6cee10b32902a089ea993.jpg'); background-size: cover; background-position: center;">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col items-center text-white">
           <div class="max-w-2xl">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-center">
-              Качественный асфальт по всему Узбекистану
+              Качественный асфальтовый сервис по всему Узбекистану
             </h1>
             <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-center">
-              Мы предлагаем совершенство в предоставлении всех видов асфальтовых услуг, основанных на опыте свыше 25 лет.
+              Мы предоставляем высококачественные услуги по асфальтированию с опытом более 25 лет.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -150,21 +178,20 @@
                 +998 94 720 34 07
               </a>
             </div>
-            <!-- "Bepul Narx So'rash" becomes "Бесплатный запрос цены" -->
-            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap">
-              Бесплатный запрос цены
+            <!-- Кнопка "Запрос цены" -->
+            <a href="tel:+998947203407" class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 rounded hover:bg-opacity-90 text-base sm:text-lg cursor-pointer whitespace-nowrap">
+              Запрос цены
             </a>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- Services Section -->
+    <!-- Раздел услуг -->
     <section id="services" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">Наши услуги</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Service Card 1 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-road-map-line text-primary text-2xl"></i>
@@ -175,18 +202,16 @@
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Подробнее →</a>
           </div>
-          <!-- Service Card 2 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-tools-line text-primary text-2xl"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">Техническое обслуживание и ремонт</h3>
             <p class="text-gray-600 mb-6">
-              Обширные технические услуги для продления срока службы асфальтовых покрытий.
+              Комплексные технические услуги для продления срока службы асфальтовых покрытий.
             </p>
             <a href="#" class="text-primary font-semibold hover:underline">Подробнее →</a>
           </div>
-          <!-- Service Card 3 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
               <i class="ri-paint-line text-primary text-2xl"></i>
@@ -201,34 +226,31 @@
       </div>
     </section>
     
-    <!-- Projects Section -->
+    <!-- Раздел проектов -->
     <section id="projects" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold text-center mb-16">Наши проекты</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          <!-- Project Card 1 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Project 1" class="w-full h-48 sm:h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/e48cc2f9708d7928d724a1569e90e281.jpg" alt="Парковки" class="w-full h-48 sm:h-64 object-cover">
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Автопарковки</h3>
+              <h3 class="text-xl font-bold mb-2">Парковки</h3>
               <p class="text-gray-600">
-                Услуги по асфальтированию и ремонту дорог автопарковок.
+                Услуги по асфальтированию и ремонту парковок.
               </p>
             </div>
           </div>
-          <!-- Project Card 2 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Project 2" class="w-full h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/58a407a8a88e500b9737e8eaf60b310e.jpg" alt="Жилые районы" class="w-full h-64 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Жилые районы</h3>
               <p class="text-gray-600">
-                Асфальтирование и ремонт подъездных путей для жилых районов.
+                Услуги по укладке и ремонту асфальта для жилых районов.
               </p>
             </div>
           </div>
-          <!-- Project Card 3 -->
           <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Project 3" class="w-full h-64 object-cover">
+            <img src="https://public.readdy.ai/ai/img_res/05590d020cc1071f291b9d2db822d78c.jpg" alt="Промышленные объекты" class="w-full h-64 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Промышленные объекты</h3>
               <p class="text-gray-600">
@@ -240,12 +262,12 @@
       </div>
     </section>
     
-    <!-- Why Us Section -->
+    <!-- Раздел "Почему выбирают нас" -->
     <section id="why-us" class="py-20">
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <div class="lg:w-1/2">
-            <img src="https://public.readdy.ai/ai/img_res/04bba9aafaa99ad580289c756a722368.jpg" alt="Why Choose Us" class="rounded-lg shadow-xl">
+            <img src="https://public.readdy.ai/ai/img_res/04bba9aafaa99ad580289c756a722368.jpg" alt="Почему выбирают нас" class="rounded-lg shadow-xl">
           </div>
           <div class="lg:w-1/2">
             <h2 class="text-4xl font-bold mb-8">Почему выбирают нас</h2>
@@ -268,7 +290,7 @@
                 <div>
                   <h3 class="text-xl font-bold mb-2">Гарантия качества</h3>
                   <p class="text-gray-600">
-                    Мы используем только качественные материалы и современные технологии.
+                    Мы используем только высококачественные материалы и современные технологии.
                   </p>
                 </div>
               </div>
@@ -279,7 +301,7 @@
                 <div>
                   <h3 class="text-xl font-bold mb-2">Своевременное выполнение</h3>
                   <p class="text-gray-600">
-                    Мы ценим ваше время и выполняем проекты в оговоренные сроки.
+                    Мы ценим ваше время и выполняем проекты в срок.
                   </p>
                 </div>
               </div>
@@ -289,7 +311,7 @@
       </div>
     </section>
     
-    <!-- Contact Section -->
+    <!-- Раздел контактов -->
     <section id="contact" class="py-12 sm:py-16 lg:py-20">
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row gap-12">
@@ -298,7 +320,7 @@
             <div class="mb-8">
               <div class="flex items-center mb-4">
                 <i class="ri-map-pin-2-fill text-primary text-2xl mr-3"></i>
-                <span class="text-xl">г. Ташкент, Чилонзорский район</span>
+                <span class="text-xl">Ташкент, район Чилонзор</span>
               </div>
               <div class="flex items-center mb-4">
                 <i class="ri-phone-fill text-primary text-2xl mr-3"></i>
@@ -312,19 +334,19 @@
           </div>
           <div class="lg:w-1/2">
             <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-              <h3 class="text-2xl font-bold mb-6">Режим работы</h3>
+              <h3 class="text-2xl font-bold mb-6">Часы работы</h3>
               <div class="space-y-3">
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Понедельник-Пятница</span>
-                  <span class="font-semibold">7:00 - 18:00</span>
+                  <span class="text-gray-600">Понедельник - Пятница</span>
+                  <span class="font-semibold">Круглосуточно</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-gray-600">Суббота</span>
-                  <span class="font-semibold">8:00 - 19:00</span>
+                  <span class="font-semibold">Круглосуточно</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-gray-600">Воскресенье</span>
-                  <span class="font-semibold">Выходной</span>
+                  <span class="font-semibold">Круглосуточно</span>
                 </div>
               </div>
             </div>
@@ -337,7 +359,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ФУТЕР -->
   <footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -346,7 +368,7 @@
             ELITE<span class="text-gray-400">ASPHALT</span>
           </div>
           <p class="text-gray-400">
-            Более 25 лет опыта в предоставлении всех видов асфальтовых услуг с высочайшим качеством!
+            Мы предоставляем высококачественные услуги по асфальтированию с опытом более 25 лет!
           </p>
         </div>
         <div>
@@ -361,9 +383,9 @@
         <div>
           <h4 class="text-xl font-bold mb-4">Контактная информация</h4>
           <ul class="space-y-2 text-gray-400">
-            <li>г. Ташкент</li>
-            <li>Чилонзорский район</li>
-            <li>Телефон: (94) 720 35 07</li>
+            <li>Ташкент</li>
+            <li>Район Чилонзор</li>
+            <li>Телефон: (94) 720 34 07</li>
             <li>Email: info@example.com</li>
           </ul>
         </div>
@@ -395,30 +417,35 @@
   </button>
   
   <script>
-    const translations = {
-      uz: { /* ... */ },
-      ru: { /* ... */ },
-      en: { /* ... */ },
-    };
+    // Переключатель языка (desktop)
+    document.getElementById('lang-toggle').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('lang-dropdown').classList.toggle('hidden');
+    });
+    // Закрытие выпадающего меню при клике вне его (desktop)
+    document.addEventListener('click', function() {
+      document.getElementById('lang-dropdown').classList.add('hidden');
+    });
 
+    // Обновление текущего языка на основе URL
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentLang = document.querySelector(".current-lang");
+      const url = window.location.pathname;
+      if (url.includes("/eng/")) {
+        currentLang.textContent = "ENG";
+      } else if (url.includes("/rus/")) {
+        currentLang.textContent = "RUS";
+      } else if (url.includes("/uzb/")) {
+        currentLang.textContent = "UZ";
+      }
+    });
+    
+    // Существующие скрипты для мобильного меню и функционала прокрутки
     const mobileMenuButton = document.getElementById("mobile-menu-button");
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     const closeMobileMenu = document.getElementById("close-mobile-menu");
     const scrollTopButton = document.querySelector(".scroll-top");
-    const languageLinks = document.querySelectorAll("[data-lang]");
-    const currentLang = document.querySelector(".current-lang");
 
-    function handleLanguageChange(e) {
-      const lang = e.target.dataset.lang;
-      currentLang.textContent = lang.toUpperCase();
-      document.querySelectorAll("[data-translate]").forEach((element) => {
-        const key = element.dataset.translate;
-        if (translations[lang] && translations[lang][key]) {
-          element.textContent = translations[lang][key];
-        }
-      });
-    }
-    
     function toggleMobileMenu() {
       mobileMenuOverlay.classList.toggle("hidden");
       document.body.style.overflow = mobileMenuOverlay.classList.contains("hidden") ? "" : "hidden";
@@ -442,9 +469,10 @@
       }
     }
     
-    languageLinks.forEach((link) => link.addEventListener("click", handleLanguageChange));
     mobileMenuButton.addEventListener("click", toggleMobileMenu);
-    closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    if(closeMobileMenu){
+      closeMobileMenu.addEventListener("click", toggleMobileMenu);
+    }
     mobileMenuOverlay.addEventListener("click", (e) => {
       if (e.target === mobileMenuOverlay) toggleMobileMenu();
     });
