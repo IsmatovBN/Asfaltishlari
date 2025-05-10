@@ -109,6 +109,10 @@
       h2 { font-size: 1.75rem !important; line-height: 2.25rem !important; } /* 28px */
       h3 { font-size: 1.25rem !important; line-height: 1.75rem !important; } /* 20px */
       .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+      /* Adjust logo position on mobile */
+      header nav .flex.items-center a[href="#home"] {
+          margin-left: -0.5rem !important; /* Adjust this value as needed to move right */
+      }
     }
 
     /* Mobile menu overlay height */
@@ -369,7 +373,7 @@
               Запросить Цену
             </a>
             <div class="flex items-center justify-center text-primary font-medium">
-              <i class="ri-phone-fill mr-2 text-accent"></i>
+              <i class="ri-phone-fill text-2xl sm:text-3xl text-accent mr-2"></i>
               <a href="tel:+998947203407" class="hover:underline">+998 94 720 34 07</a>
             </div>
           </div>
