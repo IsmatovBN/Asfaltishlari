@@ -32,15 +32,15 @@
   <meta name="Установка лотков и колодцев" content="Installation of storm drains and manholes. Optimal drainage solution.">
   <meta name="Цены асфальтирования" content="Current prices for asphalt paving of roads, parking lots, and yards. Find out more right now!">
   <meta name="Ремонт дорог" content="Professional road repair and surface restoration. Reliable quality at the best price!">
-  <meta name="Асфалт" content="Durable and long-lasting asphalt paving service for parking lots! Order now.">
-  <meta name="Тошкент асфалт" content="Asphalt paving service in Tashkent – fast and quality result. Let your roads be strong!">
-  <meta name="асфалтТошкент" content="Professional asphalt paving in Tashkent – guarantee of quality and durability!">
-  <meta name="Тошкентда асфалтлаш" content="Fast and high-quality asphalt paving services! Durable coating for roads, parking lots, and yards – order now!">
-  <meta name="Автотураргоҳларни асфалтлаш" content="Reliable asphalt paving service – durable and smooth coating for streets, yards, and walkways. Quality guaranteed!">
-  <meta name="Асфалтлаш нархи" content="Asphalt paving services in Tashkent – modern and long-lasting asphalt coating for roads, parking lots, and squares!">
-  <meta name="Кўчаларни асфалташ" content="Street asphalt paving service – professional and durable roads. Quality guaranteed!">
-  <meta name="Лоток ва колодецларни ўрнатиш" content="Creating drainage systems on roads – effective and economical solution!">
-  <meta name="Аспальт" content="Durable and long-lasting asphalt coating for roads, parking lots, and squares. Quality and reliable service!">
+  <meta name="Асфалт" content="Прочная и долговечная услуга асфальтирования для парковок! Закажите прямо сейчас.">
+  <meta name="Тошкент асфалт" content="Услуги асфальтирования в Ташкенте – быстрый и качественный результат. Пусть ваши дороги будут прочными!">
+  <meta name="асфалтТошкент" content="Профессиональное асфальтирование в Ташкенте – гарантия качества и прочности!">
+  <meta name="Тошкентда асфалтлаш" content="Быстрые и качественные услуги по укладке асфальта! Прочное покрытие для дорог, парковок и дворов – закажите прямо сейчас!">
+  <meta name="Автотураргоҳларни асфалтлаш" content="Надежная услуга асфальтирования – долговечное и гладкое покрытие для улиц, дворов и тротуаров. Качество гарантировано!">
+  <meta name="Асфалтлаш нархи" content="Услуги асфальтирования в Ташкенте – современное и долговечное асфальтовое покрытие для дорог, парковок и площадей!">
+  <meta name="Кўчаларни асфалташ" content="Услуги асфальтирования улиц – профессиональные и прочные дороги. Качество гарантировано!">
+  <meta name="Лоток ва колодецларни ўрнатиш" content="Создание систем водоотведения на дорогах – эффективное и экономичное решение!">
+  <meta name="Аспальт" content="Прочное и долговечное асфальтовое покрытие для дорог, парковок и площадей. Качественный и надежный сервис!">
   <meta charset="UTF-8">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -109,6 +109,10 @@
       h2 { font-size: 1.75rem !important; line-height: 2.25rem !important; } /* 28px */
       h3 { font-size: 1.25rem !important; line-height: 1.75rem !important; } /* 20px */
       .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+      /* Adjust logo position on mobile */
+      header nav .flex.items-center a[href="#home"] {
+          margin-left: 0.5rem !important; /* Adjust this value as needed to move right */
+      }
     }
 
     /* Mobile menu overlay height */
@@ -369,7 +373,7 @@
               Request a Quote
             </a>
             <div class="flex items-center justify-center text-primary font-medium">
-              <i class="ri-phone-fill mr-2 text-accent"></i>
+              <i class="ri-phone-fill text-2xl sm:text-3xl text-accent mr-2"></i>
               <a href="tel:+998947203407" class="hover:underline">+998 94 720 34 07</a>
             </div>
           </div>
@@ -567,7 +571,7 @@
                 <i class="ri-map-pin-2-fill text-3xl mr-4 text-accent"></i>
                 <div>
                     <h4 class="text-lg font-semibold text-white">Our Address:</h4>
-                    <span class="text-gray-200">Tashkent city, Chilanzar district.</span>
+                    <span class="text-gray-200">Tashkent city, Chilanzar district, [Street Name, Building Number]</span>
                 </div>
               </div>
               <div class="flex items-start">
